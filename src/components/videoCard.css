@@ -1,0 +1,100 @@
+@import url("../fonts.css");
+
+.videoCard {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: min-content;
+    position: relative;
+    cursor: pointer;
+}
+.videoCard img.thumbnail {
+    width: 275px;
+    height: 154px;
+    width: 16em;
+    height: 9.5em;
+}
+
+.videoCard .caption {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    justify-content: left;
+}
+
+.videoCard .caption img.channelIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.videoCard .videoInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.videoCard .videoInfoContainer h4.videoTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 6px;
+}
+
+.videoCard .videoInfoContainer p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 2%;
+    color: var(--lightText);
+}
+
+.videoCard button.IconAnimation {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: auto;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    right: 0; */
+    cursor: pointer;
+}
+.videoCard button.IconAnimation:active {
+    background-color: var(--borderColor);
+}
+
+.videoCard .videoMoreBtn > * {
+    display: none !important;
+}
+
+.videoCard:hover .videoMoreBtn > * {
+    display: block !important;
+}
+
+.videoCard button.videoMoreBtn {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+.videoCard .videoLenght {
+    position: absolute;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 4px 6px;
+
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    bottom: 8px;
+    right: 4px;
+    border-radius: 2px;
+}

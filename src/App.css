@@ -1,0 +1,30 @@
+@import url("./fonts.css");
+
+.App {
+    background-color: #181818;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.videos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 40px;
+    padding: 24px;
+}

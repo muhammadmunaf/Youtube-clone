@@ -1,0 +1,327 @@
+@import url("../fonts.css");
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: var(--lightText) var(--dark);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--lightText);
+    border-radius: 10px;
+    border: 0px none whitefff;
+}
+
+button.IconAnimation {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+button.IconAnimation:active {
+    background-color: var(--hover);
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.searchBar input[type="text"] {
+    border-radius: 1px;
+    border: 1px solid var(--borderColor);
+    padding: 10px 6px;
+    background-color: var(--searchBg);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    width: 30vw;
+}
+.searchBar input[type="text"]:focus {
+    border: 1px solid var(--selected);
+}
+
+.searchBar button {
+    background-color: #313131;
+    padding: 6px 20px;
+    outline: none;
+    border: none;
+    height: max-content;
+    border: 1px solid #313131;
+    cursor: pointer;
+}
+
+.searchBar button.micBtn {
+    padding: 10px;
+    border-radius: 40px;
+    margin-left: 8px;
+    /* width: 41.2px;
+    height: 41.2px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    border: none;
+    transition: 0.3s ease;
+}
+.searchBar button.micBtn:active {
+    background-color: var(--borderColor);
+}
+
+header {
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 24px;
+    /* position: fixed; */
+    /* opacity: var(--backgroundOpacity); */
+}
+
+header img.MainLogo {
+    height: 20px;
+    margin-left: 16px;
+}
+
+header button.userProfileImg {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header button.userProfileImg img {
+    width: 36px;
+    height: 36px;
+    border-radius: 40px;
+    margin-left: 16px;
+    border: 2px solid var(--backgroundColor);
+}
+header button.userProfileImg img:active {
+    border: 2px solid var(--selected);
+}
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.navItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 24px;
+    padding: 8px 8px 8px 24px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+.navItem:hover {
+    background-color: var(--hover);
+}
+.navItem.active {
+    background-color: var(--active);
+}
+
+.navItem p.navItemText {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    width: 148px;
+}
+
+.navItem .dot {
+    /* position: absolute; */
+    width: 4px;
+    height: 4px;
+    background-color: #3ea6ff;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.navItem img.channelIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+}
+
+nav {
+    background-color: var(--backgroundColor);
+    padding-right: 4px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    width: 300px;
+    /* opacity: var(--backgroundOpacity); */
+    /* position: fixed;
+    margin-top: 60px; */
+}
+
+nav {
+    scrollbar-width: none;
+    scrollbar-color: var(--lightText) #202020;
+    overflow: hidden;
+    padding-right: 4px;
+}
+nav:hover {
+    overflow-y: scroll;
+    padding-right: 4px;
+}
+/* Chrome, Edge, and Safari */
+nav::-webkit-scrollbar {
+    width: 8px;
+}
+nav::-webkit-scrollbar-track {
+    background: var(--backgroundColor);
+}
+nav::-webkit-scrollbar-thumb {
+    background-color: var(--lightText);
+    border-radius: 20px;
+    border: none;
+    padding-right: 4px;
+}
+
+nav .navSection {
+    padding: 12px 0px 12px 0px;
+    border-bottom: 1px solid var(--borderColor);
+}
+
+nav h4.navTitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 0px 8px 24px;
+    color: var(--lightText);
+}
+
+.sideNavLinks .row {
+    gap: 8px;
+    padding-left: 24px;
+}
+.sideNavLinks .row a {
+    color: var(--lightText);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+}
+.sideNavLinks .row p {
+    color: #717171;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.topTagsItem {
+    border-radius: 32px;
+    padding: 8px 14px;
+    background-color: var(--borderColor);
+    /* border: 0.01em solid var(--lightText) ; */
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border: none;
+    box-shadow: 0px 0px 0px 0.3px var(--lightText);
+}
+.topTagsItem:hover {
+    background-color: var(--active);
+}
+.topTagsItem.active {
+    background-color: white;
+    color: var(--borderColor);
+}
+
+.topTagsBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding: 12px 24px;
+    gap: 12px;
+    background-color: var(--backgroundColor);
+    border-top: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--borderColor);
+    /* position: fixed;
+    margin-top: 60px;
+    margin-left: 300px; */
+}
+
+.dropdownItem {
+    background-color: var(--backgroundColor);
+    padding: 6px 0px;
+    padding-left: 16px;
+    padding-right: 12px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    width: 240px;
+    transition: 0.2s ease;
+}
+.dropdownItem .dropdownItemText {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+.dropdownItem:hover {
+    background-color: var(--hover);
+}
+.dropdownItem:active {
+    background-color: var(--active);
+}
+
+.dropdownContainer {
+    /* display: block; */
+    border-radius: 4px;
+    background-color: var(--backgroundColor);
+    padding: 6px 0px;
+    position: absolute;
+    bottom: -180px;
+    /* bottom: -198px; 2 cols */
+    right: 0;
+    z-index: 99;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    /* display: none; */
+}
+.dropdownContainer .divider {
+    height: 1px;
+    width: 100%;
+    background-color: var(--hover);
+    margin: 6px 0;
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown.show {
+    display: block;
+}
