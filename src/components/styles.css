@@ -1,25 +1,20 @@
 @import url("../fonts.css");
 
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
 * {
     scrollbar-width: none;
     scrollbar-color: var(--lightText) var(--dark);
 }
-
-/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
-
 *::-webkit-scrollbar-track {
     background: var(--dark);
 }
-
 *::-webkit-scrollbar-thumb {
     background-color: var(--lightText);
-    border-radius: 10px;
+    border-radius: 20px;
     border: 0px none whitefff;
+    padding-right: 4px;
 }
 
 button.IconAnimation {
@@ -45,6 +40,7 @@ button.IconAnimation:active {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 45%;
 }
 .searchBar input[type="text"] {
     border-radius: 1px;
@@ -55,7 +51,7 @@ button.IconAnimation:active {
     font-size: 16px;
     font-weight: 400;
     outline: none;
-    width: 30vw;
+    width: 100%;
 }
 .searchBar input[type="text"]:focus {
     border: 1px solid var(--selected);
@@ -95,15 +91,15 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 8px 24px;
-    /* position: fixed; */
-    /* opacity: var(--backgroundOpacity); */
+    position: fixed;
+    width: calc(100vw - 10px);
+    z-index: 99;
+    padding-left: 16px;
 }
-
 header img.MainLogo {
     height: 20px;
     margin-left: 16px;
 }
-
 header button.userProfileImg {
     outline: none;
     border: none;
@@ -114,7 +110,6 @@ header button.userProfileImg {
     justify-content: center;
     align-items: center;
 }
-
 header button.userProfileImg img {
     width: 36px;
     height: 36px;
@@ -139,6 +134,15 @@ header button.userProfileImg img:active {
     padding: 8px 8px 8px 24px;
     text-decoration: none;
     transition: 0.2s ease;
+    width: 14.2rem;
+}
+.navItem.Min {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0px;
+    width: 4.5rem;
+    justify-content: center;
+    align-items: center;
 }
 .navItem:hover {
     background-color: var(--hover);
@@ -146,15 +150,15 @@ header button.userProfileImg img:active {
 .navItem.active {
     background-color: var(--active);
 }
-
 .navItem p.navItemText {
     font-size: 14px;
     font-weight: 400;
     color: white;
     text-decoration: none;
-    width: 148px;
 }
-
+.navItem.Min p.navItemText {
+    font-size: 10px;
+}
 .navItem .dot {
     /* position: absolute; */
     width: 4px;
@@ -174,13 +178,11 @@ nav {
     padding-right: 4px;
     height: calc(100vh - 60px);
     overflow-y: auto;
-    width: 300px;
-    /* opacity: var(--backgroundOpacity); */
-    /* position: fixed;
-    margin-top: 60px; */
-}
+    width: 15rem;
 
-nav {
+    position: fixed;
+    margin-top: 60px;
+
     scrollbar-width: none;
     scrollbar-color: var(--lightText) #202020;
     overflow: hidden;
@@ -190,7 +192,6 @@ nav:hover {
     overflow-y: scroll;
     padding-right: 4px;
 }
-/* Chrome, Edge, and Safari */
 nav::-webkit-scrollbar {
     width: 8px;
 }
@@ -203,12 +204,10 @@ nav::-webkit-scrollbar-thumb {
     border: none;
     padding-right: 4px;
 }
-
 nav .navSection {
     padding: 12px 0px 12px 0px;
     border-bottom: 1px solid var(--borderColor);
 }
-
 nav h4.navTitle {
     text-transform: uppercase;
     font-weight: 700;
@@ -266,9 +265,10 @@ nav h4.navTitle {
     background-color: var(--backgroundColor);
     border-top: 1px solid var(--borderColor);
     border-bottom: 1px solid var(--borderColor);
-    /* position: fixed;
-    margin-top: 60px;
-    margin-left: 300px; */
+
+    position: fixed;
+    width: calc(100vw - 15rem - 8px);
+    z-index: 999;
 }
 
 .dropdownItem {
@@ -297,7 +297,6 @@ nav h4.navTitle {
 .dropdownItem:active {
     background-color: var(--active);
 }
-
 .dropdownContainer {
     /* display: block; */
     border-radius: 4px;
@@ -317,7 +316,6 @@ nav h4.navTitle {
     background-color: var(--hover);
     margin: 6px 0;
 }
-
 .dropdown {
     display: none;
 }

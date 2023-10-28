@@ -3,7 +3,7 @@ import "./styles.css";
 
 export default function(props) {
     return (
-        <a href="#" className={`navItem ${props.state}`}>
+        <a href="#" className={`navItem ${props.state} ${props.type}`}>
             <img src={props.linkIcon} alt="" width={24} />
             <p className="navItemText">{props.linkText}</p>
         </a>

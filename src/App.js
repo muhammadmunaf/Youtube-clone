@@ -7,6 +7,12 @@ import TopTagsBar from "./components/TopTagsBar";
 
 import VideoData from "./VideoData";
 
+const globalState = {
+    isMenuExptended: true,
+};
+
+const globalStateContext = React.createContext(globalState);
+
 function App() {
     const Videos = VideoData.map((VideoData) => (
         <VideoCard
@@ -24,19 +30,25 @@ function App() {
         />
     ));
     return (
-        <div className="App">
-            <TopNav userProfileImg="https://picsum.photos/40/40" />
-            <div
-                className="row"
-                style={{ alignItems: "flex-start", width: "100%" }}
-            >
-                <SideNav />
-                <div className="mainContent">
-                    <TopTagsBar />
-                    <div className="videos">{Videos}</div>
+        <globalStateContext.Provider value={globalState}>
+            <div className="App">
+                <TopNav userProfileImg="https://picsum.photos/40/40" />
+                <div
+                    className="row"
+                    style={{ alignItems: "flex-start", width: "100%" }}
+                >
+                    <SideNav isExtended={true} />
+                    <div className="mainContent">
+                        <TopTagsBar />
+                        <div className="videos">
+                            {Videos}
+                            {Videos}
+                            {Videos}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </globalStateContext.Provider>
     );
 }
 

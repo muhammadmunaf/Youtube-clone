@@ -1,30 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import "./videoCard.css";
 
 import { FiMoreVertical } from "react-icons/fi";
 import Dropdown from "./Dropdown";
 
-function useOutsideAlerter(ref) {
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                console.log("You clicked outside of me!");
-            }
-        }
-        // Bind the event listener
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            // Unbind the event listener on clean up
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [ref]);
-}
-
 function VideoCard(props) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-    const wrapperRef = useRef(null);
-    useOutsideAlerter(wrapperRef);
 
     const toggleDropdown = () => {
         console.log("Clicked!");
@@ -54,7 +35,7 @@ function VideoCard(props) {
                     <FiMoreVertical size={20} color={"#fff"} />
                 </button>
             </div>
-            <Dropdown currentState={isDropdownOpen} ref={wrapperRef} />
+            <Dropdown currentState={isDropdownOpen} />
         </div>
     );
 }

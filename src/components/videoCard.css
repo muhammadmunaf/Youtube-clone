@@ -9,10 +9,12 @@
     cursor: pointer;
 }
 .videoCard img.thumbnail {
-    width: 275px;
+    /* width: 275px;
     height: 154px;
     width: 16em;
-    height: 9.5em;
+    height: 9.5em; */
+    width: 18vw;
+    height: auto;
 }
 
 .videoCard .caption {
@@ -97,4 +99,23 @@
     bottom: 8px;
     right: 4px;
     border-radius: 2px;
+}
+
+/* 3 column grid */
+@media screen and (max-width: 1200px) {
+    .videoCard img.thumbnail {
+        width: 23vw;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .videoCard img.thumbnail {
+        width: 32vw;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .videoCard img.thumbnail {
+        width: 58vw;
+    }
 }
